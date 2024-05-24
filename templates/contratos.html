@@ -6,37 +6,59 @@
 {% block content %}
 <h2>Lista de Contratos</h2>
 <div class="container">
-    <div class="row">
-        {% for contrato in contratos %}
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">Contrato No. {{ contrato.contrato_no }}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">{{ contrato.tipo_de_contrato }}</h6>
-                    <p class="card-text">
-                        <strong>Año:</strong> {{ contrato.ANO }}<br>
-                        <strong>Nombre:</strong> {{ contrato.nombre }}<br>
-                        <strong>Entidad:</strong> {{ contrato.entidad }}<br>
-                        <strong>RUP:</strong> {{ contrato.rup }}<br>
-                        <strong>Contrato:</strong> {{ contrato.contrato }}<br>
-                        <strong>SMMLV:</strong> {{ contrato.smmlv }}<br>
-                        <strong>SECOP:</strong> {{ contrato.secop }}<br>
-                        <strong>Contrato 2:</strong> {{ contrato.contrato2 }}<br>
-                        <strong>Acta Final:</strong> {{ contrato.acta_final }}<br>
-                        <strong>Objeto:</strong> {{ contrato.objeto }}<br>
-                        <strong>Fecha Inicio:</strong> {{ contrato.fecha_inicio }}<br>
-                        <strong>Fecha Final:</strong> {{ contrato.fecha_final }}<br>
-                        <strong>Valor:</strong> {{ contrato.valor }}<br>
-                        <strong>SMMLV 3:</strong> {{ contrato.smmlv3 }}<br>
-                        <strong>Adición:</strong> {{ contrato.adicion }}<br>
-                        <strong>Part. %:</strong> {{ contrato.part_porc }}<br>
-                        <strong>Valor Total:</strong> {{ contrato.valor_total }}<br>
-                        <strong>SMMLV 4:</strong> {{ contrato.smmlv4 }}
-                    </p>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Contrato No.</th>
+                    <th>Tipo de Contrato</th>
+                    <th>Año</th>
+                    <th>Nombre</th>
+                    <th>Entidad</th>
+                    <th>RUP</th>
+                    <th>Contrato</th>
+                    <th>SMMLV</th>
+                    <th>SECOP</th>
+                    <th>Contrato 2</th>
+                    <th>Acta Final</th>
+                    <th>Objeto</th>
+                    <th>Fecha Inicio</th>
+                    <th>Fecha Final</th>
+                    <th>Valor</th>
+                    <th>SMMLV 3</th>
+                    <th>Adición</th>
+                    <th>Part. %</th>
+                    <th>Valor Total</th>
+                    <th>SMMLV 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contrato in contratos %}
+                <tr>
+                    <td>{{ contrato.contrato_no }}</td>
+                    <td>{{ contrato.tipo_de_contrato }}</td>
+                    <td>{{ contrato.ANO }}</td>
+                    <td>{{ contrato.nombre }}</td>
+                    <td>{{ contrato.entidad }}</td>
+                    <td>{{ contrato.rup }}</td>
+                    <td>{{ contrato.contrato }}</td>
+                    <td>{{ contrato.smmlv }}</td>
+                    <td>{{ contrato.secop }}</td>
+                    <td>{{ contrato.contrato2 }}</td>
+                    <td>{{ contrato.acta_final }}</td>
+                    <td>{{ contrato.objeto }}</td>
+                    <td>{{ contrato.fecha_inicio }}</td>
+                    <td>{{ contrato.fecha_final }}</td>
+                    <td>{{ contrato.valor }}</td>
+                    <td>{{ contrato.smmlv3 }}</td>
+                    <td>{{ contrato.adicion }}</td>
+                    <td>{{ contrato.part_porc }}</td>
+                    <td>{{ contrato.valor_total }}</td>
+                    <td>{{ contrato.smmlv4 }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 </div>
 {% endblock %}
