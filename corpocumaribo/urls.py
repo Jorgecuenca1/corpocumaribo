@@ -20,5 +20,6 @@ from django.conf.urls.static import static
 from django.urls import path, include
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', include('contratos.urls')),  # Ajusta la inclusión de las URLs de tu aplicación core
+    path('', include('contratos.urls')),  # Ajusta la inclusión de las URLs de tu aplicación corep
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -6,10 +6,11 @@
 {% block content %}
 <h2>Lista de Contratos</h2>
 <div class="container">
-    <div class="table-responsive">
-        <table class="table table-bordered table-striped">
+    <div class="table-responsive" style="overflow-x: scroll; white-space: nowrap;">
+        <table class="table table-bordered table-striped" style="min-width: 1500px;">
             <thead class="thead-dark">
                 <tr>
+                    <th>Ver más</th>
                     <th>Contrato No.</th>
                     <th>Tipo de Contrato</th>
                     <th>Año</th>
@@ -35,6 +36,7 @@
             <tbody>
                 {% for contrato in contratos %}
                 <tr>
+                    <td><a href="{% url 'detalle_contrato' contrato.id %}">Ver más</a></td>
                     <td>{{ contrato.contrato_no }}</td>
                     <td>{{ contrato.tipo_de_contrato }}</td>
                     <td>{{ contrato.ANO }}</td>

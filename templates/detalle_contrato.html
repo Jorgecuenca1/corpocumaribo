@@ -1,0 +1,45 @@
+<!-- templates/detalle_contrato.html -->
+{% extends 'base.html' %}
+
+{% block title %}Detalle del Contrato{% endblock %}
+
+{% block content %}
+<h2>Detalle del Contrato</h2>
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h3>Contrato No. {{ contrato.contrato_no }}</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>Tipo de Contrato:</strong> {{ contrato.tipo_de_contrato }}</p>
+                    <p><strong>Año:</strong> {{ contrato.ANO }}</p>
+                    <p><strong>Nombre:</strong> {{ contrato.nombre }}</p>
+                    <p><strong>Entidad:</strong> {{ contrato.entidad }}</p>
+                    <p><strong>RUP:</strong> {{ contrato.rup }}</p>
+                    <p><strong>Contrato:</strong> {{ contrato.contrato }}</p>
+                    <p><strong>SMMLV:</strong> {{ contrato.smmlv }}</p>
+                    <p><strong>SECOP:</strong> {{ contrato.secop }}</p>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Contrato 2:</strong> {{ contrato.contrato2 }}</p>
+                    <p><strong>Acta Final:</strong> {{ contrato.acta_final }}</p>
+                    <p><strong>Objeto:</strong> {{ contrato.objeto }}</p>
+                    <p><strong>Fecha Inicio:</strong> {{ contrato.fecha_inicio }}</p>
+                    <p><strong>Fecha Final:</strong> {{ contrato.fecha_final }}</p>
+                    <p><strong>Valor:</strong> {{ contrato.valor }}</p>
+                    <p><strong>SMMLV 3:</strong> {{ contrato.smmlv3 }}</p>
+                    <p><strong>Adición:</strong> {{ contrato.adicion }}</p>
+                    <p><strong>Part. %:</strong> {{ contrato.part_porc }}</p>
+                    <p><strong>Valor Total:</strong> {{ contrato.valor_total }}</p>
+                    <p><strong>SMMLV 4:</strong> {{ contrato.smmlv4 }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <a href="{% url 'contratos' %}" class="btn btn-secondary">Volver a la lista</a>
+    </div>
+</div>
+{% endblock %}

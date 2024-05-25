@@ -8,14 +8,15 @@
     <title>{% block title %}Contratos{% endblock %}</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .carousel-inner {
-            height: 50vh; /* Limitar la altura a la mitad de la ventana */
-            overflow: hidden; /* Ocultar el desbordamiento */
+        html, body {
+            height: 100%;
         }
-
-        .carousel-item img {
-            object-fit: cover; /* Asegurarse de que las imágenes se recorten adecuadamente */
-            height: 50vh; /* Asegurar que la imagen ocupe la altura del contenedor */
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1;
         }
         .footer {
             background: #343a40;
@@ -30,8 +31,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="{% static 'logos/logo.jpg' %}"  class="d-inline-block align-top" alt="">
-          
+            <img src="{% static 'logos/logo.jpg' %}" class="d-inline-block align-top" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -57,7 +57,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{% static '112.jpg' %}"  class="d-block w-100" alt="Slide 1">
+                <img src="{% static '112.jpg' %}" class="d-block w-100" alt="Slide 1">
             </div>
             <div class="carousel-item">
                 <img src="{% static '113.jpg' %}" class="d-block w-100" alt="Slide 2">
@@ -74,19 +74,10 @@
     </div>
 
     <!-- Contenido Principal -->
-    <div class="container mt-4">
+    <div class="container mt-4 content">
         {% block content %}{% endblock %}
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <span>&copy; 2024 Empresa. Todos los derechos reservados.</span>
-        </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+        <di
