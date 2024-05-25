@@ -1,0 +1,17 @@
+<!-- templates/index.html -->
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="jumbotron">
+        <h1 class="display-4">Bienvenido a Nuestra Empresa</h1>
+        <p class="lead">Es una empresa contratista con el estado para contratos de diferentes índoles.</p>
+        <hr class="my-4">
+        <p>Para más información, navegue a través de nuestras secciones utilizando el menú de navegación.</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'contratos' %}" role="button">Ver Contratos</a>
+        <a class="btn btn-primary btn-lg" href="/admin" role="button">Intranet</a>
+    </div>
+</div>
+{% endblock %}
