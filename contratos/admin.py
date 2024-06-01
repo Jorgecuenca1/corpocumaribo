@@ -25,6 +25,6 @@ class ContratoAdmin(ImportExportModelAdmin):
         (None, {
             'fields': ('ANO', 'contrato_no', 'tipo_de_contrato', 'nombre', 'entidad', 'rup', 'contrato', 'smmlv', 
                        'secop', 'contrato2', 'acta_final', 'objeto', 'fecha_inicio', 'fecha_final', 'valor', 
-                       'smmlv3', 'adicion', 'part_porc', 'valor_total', 'smmlv4')
+                       'smmlv3', 'adicion', 'part_porc', 'valor_total', 'smmlv4','is_visible')
         }),
     )
