@@ -27,7 +27,10 @@ SECRET_KEY = "django-insecure-p3=i*=-(6m8&r$u3x%wc$czeomo(4tj6%05b_fv-tq&t235t&t
 DEBUG = True
 
 ALLOWED_HOSTS = ['corpocumaribo.co','demo.corpocumaribo.co','https://demo.corpocumaribo.co']
-CSRF_TRUSTED_ORIGINS = ['corpocumaribo.co','demo.corpocumaribo.co','https://demo.corpocumaribo.co']
+CSRF_TRUSTED_ORIGINS = [
+    'https://corpocumaribo.co',
+    'https://demo.corpocumaribo.co',
+]
 CORS_ORIGIN_WHITELIST = ['corpocumaribo.co','demo.corpocumaribo.co','https://demo.corpocumaribo.co']
 # Application definition
 
