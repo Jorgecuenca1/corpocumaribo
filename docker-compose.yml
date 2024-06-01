@@ -18,7 +18,7 @@ services:
       - '443:443'
     environment:
       DOMAINS: 'corpocumaribo.co -> http://web:8000'
-      STAGE: 'staging' # Don't use production until staging works
+      STAGE: 'production' # Don't use production until staging works
       CLIENT_MAX_BODY_SIZE:  5M
     volumes:
       - https-portal-data:/var/lib/https-portal
