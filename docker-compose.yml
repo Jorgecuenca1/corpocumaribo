@@ -17,7 +17,7 @@ services:
       - '80:80'
       - '443:443'
     environment:
-      DOMAINS: 'corpocumaribo.co -> http://web:8000 , corpocumaribo.co -> http://web:8000'
+      DOMAINS: 'corpocumaribo.co -> http://web:8000 , www.corpocumaribo.co -> http://web:8000'
       STAGE: 'production' # Don't use production until staging works
       CLIENT_MAX_BODY_SIZE:  5M
     volumes:
