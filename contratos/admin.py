@@ -7,10 +7,10 @@ class ContratoResource(resources.ModelResource):
     class Meta:
         model = Contrato
         fields = ('id', 'ANO', 'contrato_no', 'tipo_de_contrato', 'nombre', 'entidad', 'rup', 'contrato', 'smmlv',
-                  'secop', 'contrato2', 'acta_final', 'objeto', 'fecha_inicio', 'fecha_final', 'valor', 'smmlv3',
+                  'secop', 'contrato2', 'acta_inicial', 'acta_final', 'objeto', 'fecha_inicio', 'fecha_final', 'valor', 'smmlv3',
                   'adicion', 'part_porc', 'valor_total', 'smmlv4')
         export_order = ('id', 'ANO', 'contrato_no', 'tipo_de_contrato', 'nombre', 'entidad', 'rup', 'contrato', 'smmlv',
-                        'secop', 'contrato2', 'acta_final', 'objeto', 'fecha_inicio', 'fecha_final', 'valor', 'smmlv3',
+                        'secop', 'contrato2', 'acta_inicial', 'acta_final', 'objeto', 'fecha_inicio', 'fecha_final', 'valor', 'smmlv3',
                         'adicion', 'part_porc', 'valor_total', 'smmlv4')
 
 @admin.register(Contrato)
@@ -24,7 +24,7 @@ class ContratoAdmin(ImportExportModelAdmin):
     fieldsets = (
         (None, {
             'fields': ('ANO', 'contrato_no', 'tipo_de_contrato', 'nombre', 'entidad', 'rup', 'contrato', 'smmlv', 
-                       'secop', 'contrato2', 'acta_final', 'objeto', 'fecha_inicio', 'fecha_final', 'valor', 
+                       'secop', 'contrato2', 'acta_inicial', 'acta_final', 'objeto', 'fecha_inicio', 'fecha_final', 'valor',
                        'smmlv3', 'adicion', 'part_porc', 'valor_total', 'smmlv4','is_visible')
         }),
     )
