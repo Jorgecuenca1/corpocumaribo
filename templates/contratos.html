@@ -5,6 +5,13 @@
 
 {% block content %}
 <h2>Lista de Contratos</h2>
+
+<!-- Formulario de búsqueda -->
+<form method="GET" action="{% url 'contratos' %}" class="mb-4">
+    <input type="text" name="q" placeholder="Buscar contratos..." value="{{ query }}" class="form-control" style="max-width: 300px; display: inline-block;">
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
 <div class="container">
     <div class="table-responsive" style="overflow-x: scroll; white-space: nowrap;">
         <table class="table table-bordered table-striped" style="min-width: 1500px;">
@@ -21,6 +28,7 @@
                     <th>SMMLV</th>
                     <th>SECOP</th>
                     <th>Contrato 2</th>
+                    <th>Acta Inicial</th>
                     <th>Acta Final</th>
                     <th>Objeto</th>
                     <th>Fecha Inicio</th>
@@ -47,6 +55,7 @@
                     <td>{{ contrato.smmlv }}</td>
                     <td>{{ contrato.secop }}</td>
                     <td>{{ contrato.contrato2 }}</td>
+                    <td>{{ contrato.acta_inicial }}</td>
                     <td>{{ contrato.acta_final }}</td>
                     <td>{{ contrato.objeto }}</td>
                     <td>{{ contrato.fecha_inicio }}</td>
@@ -58,9 +67,14 @@
                     <td>{{ contrato.valor_total }}</td>
                     <td>{{ contrato.smmlv4 }}</td>
                 </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="22">No se encontraron contratos que coincidan con la búsqueda.</td>
+                </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
 </div>
+
 {% endblock %}
