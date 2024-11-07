@@ -11,6 +11,7 @@ class Contrato(models.Model):
     smmlv = models.CharField(max_length=20, blank=True, null=True)
     secop = models.CharField(max_length=100, blank=True, null=True)
     contrato2 = models.CharField(max_length=100, blank=True, null=True)
+    acta_inicial = models.CharField(max_length=100, blank=True, null=True)
     acta_final = models.CharField(max_length=100, blank=True, null=True)
     objeto = models.TextField(blank=True, null=True)
     fecha_inicio = models.CharField(max_length=100, blank=True, null=True)
